@@ -1,8 +1,12 @@
 {
-  "name": "@strapi/plugin-seo",
-  "version": "2.0.1",
+  "name": "@sklinet/strapi-plugin-seo",
+  "version": "1.0.0",
   "description": "Make your Strapi content SEO friendly.",
   "keywords": [],
+  "author": {
+    "name": "SKLINET s.r.o.",
+    "url": "https://github.com/SKLINET"
+  },
   "type": "commonjs",
   "exports": {
     "./package.json": "./package.json",
@@ -57,18 +61,7 @@
     "yargs": "^17.2.1",
     "prettier": "3.3.3"
   },
-  "author": {
-    "name": "Strapi Solutions SAS",
-    "email": "hi@strapi.io",
-    "url": "https://strapi.io"
-  },
-  "maintainers": [
-    {
-      "name": "Strapi Solutions SAS",
-      "email": "hi@strapi.io",
-      "url": "https://strapi.io"
-    }
-  ],
+  "maintainers": [],
   "strapi": {
     "name": "seo",
     "displayName": "SEO",
