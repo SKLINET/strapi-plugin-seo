@@ -1,6 +1,6 @@
 {
   "name": "@sklinet/strapi-plugin-seo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Make your Strapi content SEO friendly.",
   "keywords": [],
   "author": {
@@ -30,8 +30,7 @@
     "build": "strapi-plugin build",
     "verify": "strapi-plugin verify",
     "watch": "strapi-plugin watch",
-    "watch:link": "strapi-plugin watch:link",
-    "postinstall": "strapi-plugin build"
+    "watch:link": "strapi-plugin watch:link"
   },
   "dependencies": {
     "@strapi/design-system": "^2.0.0-rc.10",
