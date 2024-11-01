@@ -1,3 +1,3 @@
-import pluginPkg from '../../package.json';
+import PLUGIN_ID from '../../package.json';
 
-export const pluginId = pluginPkg.name.replace(/^@strapi\/plugin-/i, '');
+export const PLUGIN_ID = pluginPkg.name.replace(/^(@sklinet\/strapi-)plugin-/i, '');

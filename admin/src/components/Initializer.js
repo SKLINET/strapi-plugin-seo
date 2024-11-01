@@ -4,7 +4,7 @@
  *
  */
 import * as React from 'react';
-import { pluginId } from '../pluginId';
+import { PLUGIN_ID } from '../pluginId';
 
 export const Initializer = ({ setPlugin }) => {
   const ref = React.useRef(undefined);
@@ -12,7 +12,7 @@ export const Initializer = ({ setPlugin }) => {
 
   React.useEffect(() => {
     if (ref.current) {
-      ref.current(pluginId);
+      ref.current(PLUGIN_ID);
     }
   }, []);
 

@@ -5,7 +5,7 @@ import { Initializer } from './components/Initializer';
 import { SeoChecker } from './components/CMEditView/RightLinksCompo';
 import { pluginPermissions } from './permissions';
 
-import { pluginId } from './pluginId';
+import { PLUGIN_ID } from './pluginId';
 import { prefixPluginTranslations } from './utils/prefixPluginTranslations';
 
 const name = pluginPkg.strapi.name;
@@ -13,11 +13,11 @@ const name = pluginPkg.strapi.name;
 export default {
   register(app) {
     app.addMenuLink({
-      to: `/plugins/${pluginId}`,
+      to: `/plugins/${PLUGIN_ID}`,
       icon: Search,
       permissions: pluginPermissions.main,
       intlLabel: {
-        id: `${pluginId}.plugin.name`,
+        id: `${PLUGIN_ID}.plugin.name`,
         defaultMessage: 'SEO',
       },
       Component: async () => {
@@ -27,7 +27,7 @@ export default {
       },
     });
     app.registerPlugin({
-      id: pluginId,
+      id: PLUGIN_ID,
       initializer: Initializer,
       isReady: false,
       name,
@@ -47,7 +47,7 @@ export default {
         return import(`./translations/${locale}.json`)
           .then(({ default: data }) => {
             return {
-              data: prefixPluginTranslations(data, pluginId),
+              data: prefixPluginTranslations(data, PLUGIN_ID),
               locale,
             };
           })

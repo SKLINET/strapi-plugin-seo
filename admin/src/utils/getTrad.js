@@ -1,3 +1,3 @@
-import { pluginId } from '../pluginId';
+import { PLUGIN_ID } from '../pluginId';
 
-export const getTrad = (id) => `${pluginId}.${id}`;
+export const getTrad = (id) => `${PLUGIN_ID}.${id}`;

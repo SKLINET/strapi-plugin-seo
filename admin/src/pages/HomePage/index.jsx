@@ -14,7 +14,7 @@ import { Main } from '../../components/HomePage/Main';
 import { Header } from '../../components/HomePage/Header';
 
 import { getTrad } from '../../utils/getTrad';
-import { pluginId } from '../../pluginId';
+import { PLUGIN_ID } from '../../pluginId';
 
 export const HomePage = React.memo(() => {
   const { get, post } = useFetchClient();
@@ -29,7 +29,7 @@ export const HomePage = React.memo(() => {
 
   const fetchSeoComponent = async () => {
     try {
-      const { data } = await get(`/${pluginId}/component`);
+      const { data } = await get(`/${PLUGIN_ID}/component`);
 
       return data;
     } catch (error) {
@@ -39,7 +39,7 @@ export const HomePage = React.memo(() => {
 
   const fetchContentTypes = async () => {
     try {
-      const { data } = await get(`/${pluginId}/content-types`);
+      const { data } = await get(`/${PLUGIN_ID}/content-types`);
 
       return data;
     } catch (error) {
@@ -49,7 +49,7 @@ export const HomePage = React.memo(() => {
 
   const createSeoComponent = async () => {
     try {
-      const data = await post(`/${pluginId}/component`);
+      const data = await post(`/${PLUGIN_ID}/component`);
 
       return data.json();
     } catch (error) {
